@@ -1,11 +1,16 @@
 {
   "name": "dane_resume_client",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy:staging": "now --target staging -A staging.now.json -e STAGED=true",
+    "deploy:production": "now --target production -A production.now.json -e STAGED=true"
   },
   "dependencies": {
     "next": "9.0.5",
